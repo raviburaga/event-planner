@@ -13,7 +13,7 @@ const EventList = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/events', {
+        const response = await fetch('https://backend-event-planner.onrender.com/api/events', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`, // Include token in headers

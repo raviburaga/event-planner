@@ -16,7 +16,7 @@ const EventDetails = () => {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/events/${id}`, {
+        const response = await fetch(`https://backend-event-planner.onrender.com/api/events/${id}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`, // Include token in headers
@@ -43,7 +43,7 @@ const EventDetails = () => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/events/${id}`, {
+      const response = await fetch(`https://backend-event-planner.onrender.com/api/events/${id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`, // Include token in headers
@@ -63,7 +63,7 @@ const EventDetails = () => {
 
   const handleSave = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/events/${id}`, {
+      const response = await fetch(`https://backend-event-planner.onrender.com/api/events/${id}`, {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`, // Include token in headers

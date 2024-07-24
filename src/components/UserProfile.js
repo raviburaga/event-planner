@@ -20,7 +20,7 @@ const UserProfile = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/user/profile', {
+        const response = await axios.get('https://backend-event-planner.onrender.com/api/user/profile', {
           headers: {
             'Authorization': `Bearer ${token}`, // Include token in headers
           },
@@ -54,7 +54,7 @@ const UserProfile = () => {
 
   const handleSave = async () => {
     try {
-      await axios.put('http://localhost:5000/api/user/profile', formData, {
+      await axios.put('https://backend-event-planner.onrender.com/api/user/profile', formData, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',

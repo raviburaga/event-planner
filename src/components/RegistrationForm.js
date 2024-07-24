@@ -14,7 +14,7 @@ const RegistrationForm = () => {
     const fetchEventDetails = async () => {
       try {
         console.log('fetching the event details of the event :',eventId);
-        const response = await fetch(`http://localhost:5000/api/public/events/${eventId}`);
+        const response = await fetch(`https://backend-event-planner.onrender.com/api/public/events/${eventId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch event details');
         }
@@ -46,7 +46,7 @@ const RegistrationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://localhost:5000/api/public/register/${eventId}`, {
+      const response = await fetch(`https://backend-event-planner.onrender.com/api/public/register/${eventId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,7 +72,8 @@ const RegistrationForm = () => {
       <div className="w-full text-pink-400 text-xl flex justify-center align-center  font-bold max-w-lg p-6 bg-gray-800 rounded-lg shadow-lg">Sorry to inform you that we <br/> {error} Your Registration Form <br/> Contact Your Invitee</div></div>;
 
   return (
-    <div className="p-6 h-screen m-12 bg-gray-800 rounded-lg shadow-lg max-w-lg mx-auto">
+    <div className='flex items-center justify-center min-h-screen bg-gray-900'>
+    <div className="p-6 m-12 bg-gray-800 rounded-lg shadow-lg max-w-lg mx-auto">
       <h2 className="text-2xl font-bold text-center text-pink-300 mb-6">Register for Event</h2>
       <p  className='text-2xl font-bold text-center text-pink-300 mb-6'>Hello Welcome to the event planner technologies</p>
       {event && (
@@ -95,6 +96,7 @@ const RegistrationForm = () => {
           <button type="submit" className="w-full py-2 px-4 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition duration-300">Register</button>
         </form>
       )}
+    </div>
     </div>
   );
 };

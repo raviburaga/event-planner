@@ -12,7 +12,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/login', { email, password });
+      const response = await axios.post('https://backend-event-planner.onrender.com/login', { email, password });
       const { token, user } = response.data;
       console.log('userid:', user._id, token);
       // Store user ID in local storage
