@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const RegistrationForm = () => {
   const { eventId } = useParams();
+  const navigate = useNavigate();
   const [event, setEvent] = useState(null);
   const [formData, setFormData] = useState({});
   const [loading, setLoading] = useState(true);
@@ -59,6 +60,7 @@ const RegistrationForm = () => {
       }
 
       alert('Registration successful!');
+      navigate('/')
     } catch (error) {
       console.error('Error submitting registration:', error);
       alert('Error submitting registration');
