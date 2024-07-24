@@ -8,6 +8,7 @@ import planningIllustration from '../assets/planning-illustration.jpg';
 import eventIllustration from '../assets/event-illustration.jpg';
 import Logo from '../assets/logo.png';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { IoLogoTwitter } from 'react-icons/io';
 
 const Home = () => {
   const { user, logout, isAuthenticated } = useAuth();
@@ -139,13 +140,13 @@ const Home = () => {
       <a href="mailto:buragaravi2002@gmail.com" className="hover:text-pink-300 transition duration-300">Email: buragaravi2002@gmail.com</a>
       <a href="tel:+919010462357" className="hover:text-pink-300 transition duration-300">Phone: +91 9010462357</a>
       <div className="flex flex-row m-4 space-x-4">
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
+      <a href="https://www.facebook.com/pandu.bujji.50159/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
         <FaFacebookF />
       </a>
-      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
-        <FaTwitter />
+      <a href="https://x.com/RaviBuraga" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
+      <IoLogoTwitter />
       </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
+      <a href="https://www.instagram.com/r_o_y_a_l_s_u_n" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
         <FaInstagram />
       </a>
       <a href="www.linkedin.com/in/ravi-buraga-54b0bb280" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
