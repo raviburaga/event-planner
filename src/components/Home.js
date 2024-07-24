@@ -6,7 +6,8 @@ import CalendarView from './CalendarView';
 import EventForm from './EventForm'; // Adjust import path as necessary
 import planningIllustration from '../assets/planning-illustration.jpg';
 import eventIllustration from '../assets/event-illustration.jpg';
-// import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import Logo from '../assets/logo.png';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const Home = () => {
   const { user, logout, isAuthenticated } = useAuth();
@@ -124,45 +125,45 @@ const Home = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-pink-900 text-white p-6 flex justify-between items-center rounded-t-lg">
-  <div className="flex flex-col space-y-4">
-    <div className="text-lg font-bold">Event Planner</div>
-    <div className="flex space-x-4">
+      <footer className="bg-pink-900 text-white p-6 flex flex-col md:flex-row md:justify-between items-center rounded-t-lg">
+  {/* Left Section */}
+  <div className="flex flex-row items-center md:items-start space-y-4 md:space-y-0 md:flex-row md:space-x-8">
+    <img src={Logo} alt="Logo" className="w-16 h-16 md:w-24 md:h-24 mb-2 md:mb-0" />
+    <div className="text-xl flex flex-row items-center justify-center font-bold">Event Planner</div> 
+  </div>
+
+  {/* Center Section */}
+  <div className="flex flex-col md:flex-row md:space-x-12 space-y-4 md:space-y-0 mt-4 md:mt-0">
+    <div className="flex flex-col space-y-2">
+      <div className="font-bold">Contact Us</div>
+      <a href="mailto:buragaravi2002@gmail.com" className="hover:text-pink-300 transition duration-300">Email: buragaravi2002@gmail.com</a>
+      <a href="tel:+919010462357" className="hover:text-pink-300 transition duration-300">Phone: +91 9010462357</a>
+      <div className="flex flex-row m-4 space-x-4">
       <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
-        <i className="fab fa-facebook-f"></i>
+        <FaFacebookF />
       </a>
       <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
-        <i className="fab fa-twitter"></i>
+        <FaTwitter />
       </a>
       <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
-        <i className="fab fa-instagram"></i>
+        <FaInstagram />
       </a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
-        <i className="fab fa-linkedin-in"></i>
+      <a href="www.linkedin.com/in/ravi-buraga-54b0bb280" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300">
+        <FaLinkedinIn />
       </a>
     </div>
-  </div>
-  <div className="flex space-x-12">
-    <div className="flex flex-col space-y-2">
-      <div className="font-semibold">Contact Us</div>
-      <a href="mailto:contact@example.com" className="hover:text-pink-300 transition duration-300">Email: contact@example.com</a>
-      <a href="tel:+1234567890" className="hover:text-pink-300 transition duration-300">Phone: +123-456-7890</a>
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-300 transition duration-300 flex items-center">
-        <i className="fab fa-facebook-f mr-2"></i> Facebook
-      </a>
+      
     </div>
     <div className="flex flex-col space-y-2">
-      <div className="font-semibold">Our Others</div>
-      <a href="#about" className="hover:text-pink-300 transition duration-300">About Us</a>
-      <a href="#services" className="hover:text-pink-300 transition duration-300">Services</a>
-      <a href="#careers" className="hover:text-pink-300 transition duration-300">Careers</a>
-      <a href="#contact" className="hover:text-pink-300 transition duration-300">Contact</a>
+      <div className="font-bold ">Our Other Apps</div>
+      <a href="#" className="hover:text-pink-300 transition duration-300">Recipe App</a>
+      <a href="https://expense-tracker-ravi.vercel.app/" className="hover:text-pink-300 transition duration-300">Expense Tracker</a>
+      <a href="https://translator-ravi.vercel.app/" className="hover:text-pink-300 transition duration-300">Translator</a>
+      <a href="https://ravi-buraga-portfolio.vercel.app/" className="hover:text-pink-300 transition duration-300">Portfolio</a>
     </div>
   </div>
-  <div className="flex items-center space-x-4">
-    <img src="/path/to/logo.png" alt="Logo" className="w-12 h-12" />
-    <div className="text-lg font-bold">Event Planner</div>
-  </div>
+
+  
 </footer>
 
     </div>
